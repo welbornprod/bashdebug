@@ -3,7 +3,8 @@
 A bash debugging helper.
 This runs bash scripts with xtrace, verbose, and/or noexec set to provide
 debugging info, with colorization, extra formatting, and optional line
-filtering.
+filtering. A fancy `PS4` is set to show the file names, function names, and
+line numbers.
 
 
 ## Command Help
@@ -33,10 +34,19 @@ Options:
 
 The default action runs the script with `bash -x`, which expands the
 lines as they are executed.
-A fancy PS4 is set, to show the file, line, and function name.
 
 If bashdebug.sh args conflict with the script's arguments, you can use
 -- to seperate the script's arguments from bashdebug.sh arguments.
+```
+
+## Installation
+
+Clone this repo, and symlink this script somewhere in `$PATH`:
+```bash
+git clone https://github.com/welbornprod/bashdebug.git
+cd bashdebug
+# Assuming ~/.local/bin is included in $PATH:
+ln -s "$PWD/bashdebug.sh" ~/.local/bin/bashdebug
 ```
 
 ## Colors

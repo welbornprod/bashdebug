@@ -101,7 +101,9 @@ function print_usage {
     echo "$appname v. $appversion
 
     Runs bash scripts with xtrace, verbose, and/or noexec set to provide
-    debugging info.
+    debugging info. A fancy PS4 is set to show the file, line, and function
+    name.
+
 
     Usage:
         $appscript -h | -v
@@ -128,7 +130,6 @@ function print_usage {
 
     The default action runs the script with \`bash -x\`, which expands the
     lines as they are executed.
-    A fancy PS4 is set, to show the file, line, and function name.
 
     If $appscript args conflict with the script's arguments, you can use
     -- to seperate the script's arguments from $appscript arguments.
