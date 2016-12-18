@@ -115,7 +115,7 @@ function print_usage {
                                   Sets the xtrace, verbose, and noexec
                                   options.
         -c,-t,--test,--compile  : Uses the -n flag for bash.
-                                  Set the noexec option.
+                                  Sets the noexec option.
                                   Tests if the script will compile.
                                   Does not actually execute the commands.
         -f pat,--filter pat     : Filter output lines using text/regex.
