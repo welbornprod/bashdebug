@@ -4,7 +4,7 @@
 #   http://wiki.bash-hackers.org/scripting/debuggingtips
 # -Christopher Welborn 11-01-2016
 appname="bashdebug"
-appversion="0.1.0"
+appversion="0.1.1"
 apppath="$(readlink -f "${BASH_SOURCE[0]}")"
 appscript="${apppath##*/}"
 appdir="${apppath%/*}"
@@ -39,10 +39,12 @@ ${colortext}"
 function define_colors {
     # shellcheck disable=SC2034
     if [[ -f "$colrdef_file" ]]; then
-        # shellcheck source=/home/cj/scripts/bash/bashdebug/bashdebug_colorrc
+        # shellcheck source=/home/cj/bashdebug_colorrc
+        # shellcheck disable=SC1091
         source "$colrdef_file"
     elif [[ -f "$default_colrdef_file" ]]; then
         # shellcheck source=/home/cj/scripts/bash/bashdebug/bashdebug_colorrc
+        # shellcheck disable=SC1091
         source "$default_colrdef_file"
     else
         # basic color definitions
@@ -76,7 +78,7 @@ function define_colors {
     [[ -n $colorlineno ]] ||  colorlineno=$magenta
     [[ -n $colorfunc ]] ||  colorfunc=$green
     [[ -n $colortext ]] ||  colortext=$nc
-    export colorfile colorlineno colorfunc
+    export colorfile colorlineno colorfunc colorsymbol colortext
 }
 
 function echo_err {
