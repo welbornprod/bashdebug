@@ -39,8 +39,10 @@ ${colortext}"
 function define_colors {
     # shellcheck disable=SC2034
     if [[ -f "$colrdef_file" ]]; then
+        # shellcheck source=/home/cj/scripts/bash/bashdebug/bashdebug_colorrc
         source "$colrdef_file"
     elif [[ -f "$default_colrdef_file" ]]; then
+        # shellcheck source=/home/cj/scripts/bash/bashdebug/bashdebug_colorrc
         source "$default_colrdef_file"
     else
         # basic color definitions

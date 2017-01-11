@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# basic color definitions
+black="$(tput setaf 0)"
+blue="$(tput setaf 4)"
+cyan="$(tput setaf 6)"
+darkgrey="$(tput bold ; tput setaf 0)"
+green="$(tput setaf 2)"
+lightblue="$(tput setaf 4)"
+lightcyan="$(tput bold ; tput setaf 6)"
+lightgreen="$(tput bold ; tput setaf 2)"
+lightgrey="$(tput setaf 7)"
+lightred="$(tput bold ; tput setaf 1)"
+magenta="$(tput setaf 5)"
+pink="$(tput bold ; tput setaf 5)"
+red="$(tput setaf 1)"
+white="$(tput bold ; tput setaf 7)"
+whitedull="\033[38;5;251m"
+whitedullbold="\033[1m\033[38;5;251m"
+yellow="$(tput setaf 3)"
+# reset code.
+nc="$(tput sgr0)"
+
+export black blue cyan darkgrey green
+export lightblue lightcyan lightgreen lightgrey lightred
+export magenta pink red white whitedull whitedullbold yellow nc
+
+# Codes used in PS4
+colorsymbol=$cyan
+colorfile=$lightblue
+colorlineno=$magenta
+colorfunc=$green
+colortext=$nc
+export colorfile colorlineno colorfunc colorsymbol colortext
